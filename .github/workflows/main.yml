@@ -2,7 +2,7 @@ name: Hourly Crypto Hunter
 
 on:
   schedule:
-    - cron: '50 * * * *'  # 每個整點執行一次
+    - cron: '35 * * * *'  # 每個整點執行一次
   workflow_dispatch:      # 允許手動點擊執行
 
 jobs:

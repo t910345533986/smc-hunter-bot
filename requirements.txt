@@ -1,18 +1,5 @@
-import os
-
-# --- Discord 配置 ---
-# 從環境變數讀取，如果讀不到則為 None
-DISCORD_WEBHOOK_URL = os.getenv("MY_DISCORD_WEBHOOK")
-
-class BingXStructureHunterV37_CloudFix:
-    def send_discord_report(self, content):
-        # 檢查是否有設定 Webhook，沒有就跳過
-        if not DISCORD_WEBHOOK_URL: 
-            print("未設定 Discord Webhook，跳過發送報告")
-            return
-        try: 
-            requests.post(DISCORD_WEBHOOK_URL, json={"content": content}, timeout=10)
-        except Exception as e:
-            print(f"發送報告失敗: {e}")
-
-    # upload_plot_to_discord 函數也請比照辦理...
+pandas
+requests
+matplotlib
+numpy
+tqdm
